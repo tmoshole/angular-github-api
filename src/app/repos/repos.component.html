@@ -1,0 +1,27 @@
+<div class="container">
+    <h1>Repos</h1>
+    <table class="table table-bordered mt-4">
+      <thead>
+        <tr>
+          <th>Repo Name</th>
+          <th>Created At</th>
+          <th>Repo Link</th>
+          <th>Clone Link</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let repo of repos">
+          <td>{{ repo.name }}</td>
+          <td>{{ repo.created_at }}</td>
+          <td>{{repo.html_url}}</td>
+          <td>{{repo.clone_url}}</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="pagination">
+      <button class="btn btn-primary" [disabled]="currentPage === 1" (click)="onPageChange(currentPage - 1)">Previous</button>
+      <span>Page {{ currentPage }} of {{ totalPages }}</span>
+      <button class="btn btn-primary" [disabled]="currentPage === totalPages" (click)="onPageChange(currentPage + 1)">Next</button>
+    </div>
+  </div>
+

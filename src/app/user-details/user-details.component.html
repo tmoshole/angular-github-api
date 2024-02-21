@@ -1,0 +1,18 @@
+<div class="container">
+    <h1>User Details</h1>
+    <div *ngIf="user">
+      <div>
+        <img [src]="user.avatar_url" alt="Avatar" width="150">
+      </div>
+      <div>
+        <p><strong>Username:</strong> {{ user.login }}</p>
+        <p><strong>Full Name:</strong> {{ user.name }}</p>
+        <p><strong>Bio:</strong> {{ user.bio }}</p>
+        <p><strong>Followers:</strong> {{ user.followers }} <a [routerLink]="['/' + user.login + '/followers']">(View Followers)</a></p>
+        <p><strong>Following:</strong> {{ user.following }} <a [routerLink]="['/' + user.login + '/following']">(View Following)</a></p>
+        <p><strong>Repos:</strong> {{ user.public_repos }} <a [routerLink]="['/' + user.login + '/repos']">(View Repos)</a></p>
+        <p><strong>Gists:</strong> {{ user.public_gists }} <a [routerLink]="['/' + user.login + '/gists']">(View Gists)</a></p>
+      </div>
+    </div>
+  </div>
+  

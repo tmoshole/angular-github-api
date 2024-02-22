@@ -3,15 +3,15 @@
     <table class="table table-bordered mt-4">
       <thead>
         <tr>
-          <th>Username</th>
           <th>Profile Image</th>
+          <th>Username</th>
           <th>Type</th>
         </tr>
       </thead>
       <tbody>
         <tr *ngFor="let follower of followers">
-          <td>{{ follower.login }}</td>
           <td><img [src]="follower.avatar_url" alt="Profile Image" width="50"></td>
+          <td>{{ follower.login }}</td>
           <td>{{ follower.type }}</td>
         </tr>
       </tbody>

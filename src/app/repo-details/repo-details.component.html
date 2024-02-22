@@ -1,0 +1,16 @@
+<div class="container">
+  <h1>Repository Details</h1>
+  <div *ngIf="repo">
+    <div>
+      <strong>Name:</strong> {{ repo.name }}
+    </div>
+    <div>
+      <strong>Description:</strong> {{ repo.description }}
+    </div>
+    <!-- Add more details as needed -->
+  </div>
+  <div *ngIf="!repo">
+    <p>Loading repository details...</p>
+  </div>
+</div>
+

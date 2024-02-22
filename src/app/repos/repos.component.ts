@@ -32,7 +32,6 @@ export class ReposComponent implements OnInit {
       .subscribe((repos: any) => {
         this.repos = repos;
         this.totalrepos = repos;
-        console.log("reposssss", repos)
       }); 
   }
 

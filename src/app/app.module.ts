@@ -11,6 +11,7 @@ import { ReposComponent } from './repos/repos.component';
 import { GistsComponent } from './gists/gists.component';
 import { FollowersComponent } from './followers/followers.component';
 import { FollowingComponent } from './following/following.component';
+import {RepoDetailsComponent} from './repo-details/repo-details.component'
 import { GithubApiService } from './github-api.service';
 import { RouterModule } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -23,7 +24,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     ReposComponent,
     GistsComponent,
     FollowersComponent,
-    FollowingComponent
+    FollowingComponent,
+    RepoDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -32,6 +34,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     FormsModule,
     RouterModule.forRoot(routes),
     NgbModule
+    
   ],
   providers: [GithubApiService],
   bootstrap: [AppComponent]

@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -36,6 +37,11 @@ export class GithubApiService {
 
   getGists(username: string, page: number, perPage: number) {
     const url = `${this.baseUrl}/users/${username}/gists?page=${page}&per_page=${perPage}`;
+    return this.http.get(url);
+  }
+
+  getRepo(username: string, repoName: string): Observable<any> {
+    const url = `${this.baseUrl}/repos/${username}/${repoName}`;
     return this.http.get(url);
   }
 

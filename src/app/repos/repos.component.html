@@ -10,11 +10,12 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let repo of repos">
+
+        <tr *ngFor="let repo of repos" >
           <td>{{ repo.name }}</td>
           <td>{{ repo.created_at }}</td>
-          <td>{{repo.html_url}}</td>
-          <td>{{repo.clone_url}}</td>
+          <td><a :href="repo.html_url" target="_blank">{{ repo.html_url }}</a></td>
+          <td><a :href="repo.clone_url" target="_blank">{{ repo.clone_url }}</a></td>
         </tr>
       </tbody>
     </table>
